@@ -1,19 +1,29 @@
 import Papa from "papaparse";
 
-export function parseCSV(filePath, callback) {
-    fetch(filePath)
-    .then(response => response.text())
-    .then(csvText => {
-        const results = Papa.parse(csvText, {
-            download: true,
+export async function parseCSV(filePath, callback) {
+    try {
+        const response = await fetch(filePath);
+        const csvText = await response.text();
+
+        Papa.parse(csvText, {
             header: true,
             dynamicTyping: true,
             skipEmptyLines: true,
+            complete: (results) => {
+                if (results?.data?.length) {
+                    callback(results.data, results.meta.fields);
+                } else {
+                    console.warn("No data found in CSV.");
+                    callback([], []);
+                }
+            },
+            error: function (err) {
+                console.error("Error fetching or parsing CSV:", err);
+                callback([], []);
+            }
         });
-        callback(results.data, results.meta.fields);
-    })
-    .catch(err => {
-        console.error("Error fetching or parsing CSV:", err);
+    } catch (error) {
+        console.error("Error fetching or parsing CSV:", error);
         callback([], []);
-    });
+    }
 }
