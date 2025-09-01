@@ -17,7 +17,7 @@ const Table = () => {
     const [searchQuery, setSearchQuery] = useState("");
 
     useEffect(() => {
-        parseCSV("/public/data/pegawai_db.csv", (parsedData, fields) => {
+        parseCSV("../../public/data/pegawai_db.csv", (parsedData, fields) => {
             setData(parsedData);
             setFilteredData(parsedData);
             setHeaders(fields);
