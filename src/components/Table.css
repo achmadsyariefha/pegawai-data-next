@@ -1,0 +1,57 @@
+.search-input {
+  margin-bottom: 1rem;
+  padding: 8px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.data-table th,
+.data-table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  word-break: break-word;
+}
+
+.data-table th {
+  background-color: #004085;
+  color: white;
+  font-weight: bold;
+}
+
+.text-muted {
+  color: #6c757d;
+}
+
+.pagination {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+}
+
+.pagination button {
+  padding: 6px 12px;
+  border: none;
+  background-color: #e2e6ea;
+  cursor: pointer;
+}
+
+.pagination button.active {
+  background-color: #004085;
+  color: white;
+  font-weight: bold;
+}
+
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
