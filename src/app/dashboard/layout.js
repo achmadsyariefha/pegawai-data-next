@@ -1,4 +1,4 @@
-import '../../public/css/output.css';
+import '../../styles/output.css';
 
 export default function DashboardLayout({ children }) {
     return (
