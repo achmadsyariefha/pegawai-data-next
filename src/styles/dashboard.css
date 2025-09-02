@@ -1,0 +1,13 @@
+@import 'tailwindcss';
+
+@utility btn-primary {
+    @apply bg-blue-600 text-white font-bold py-2 px-4 rounded hover:bg-blue-700;
+}
+
+@utility card {
+    @apply bg-white shadow-md rounded-lg p-6;
+}
+
+@utility table-header {
+        @apply text-gray-800 text-white;
+}

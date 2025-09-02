@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import './Table.css';
+import '../styles/Table.css';
 import SearchBar from "./SearchBar";
 import Pagination from "./Pagination";
 import { filterData } from "../utils/filterData";
