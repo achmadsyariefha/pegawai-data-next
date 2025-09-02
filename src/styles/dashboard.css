@@ -1,11 +1,21 @@
 @import 'tailwindcss';
 
-@utility btn-primary {
-    @apply bg-blue-600 text-white font-bold py-2 px-4 rounded hover:bg-blue-700;
+@theme {
+    --color-dashboard-bg: #f9fafb;
+    --color-dashboard-accent: #2563eb;
+    --font-dashboard: "Inter", sans-serif;
 }
 
-@utility card {
-    @apply bg-white shadow-md rounded-lg p-6;
+@utility dashboard-page {
+    @apply bg-[--color-dashboard-bg] font-[--font-dashboatd] min-h-screen text-gray-800;
+}
+
+@utility dashboard-header {
+    @apply bg-[--color-dashboard-accent] text-white p-4 shadow;
+}
+
+@utility dashboard-card {
+    @apply bg-white p-6 rounded-lg shadow-md;
 }
 
 @utility table-header {
