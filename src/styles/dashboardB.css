@@ -6,7 +6,7 @@
   --font-main: "Inter", sans-serif;
 }
 
-@utility dashboardB-page body {
+@utility dashboardB-page {
   @apply bg-[--color-bg] text-gray-800 font-[--font-main] min-h-screen;
 }
 
