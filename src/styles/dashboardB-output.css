@@ -207,7 +207,7 @@
   }
   .dashboardB-page {
     min-height: 100vh;
-    background-color: --color-bg;
+    background-color: --color-dashboard-bg;
     font-family: --font-main;
     color: var(--color-gray-800);
   }
